@@ -49,7 +49,7 @@ returns IO::Handle->error() for the device handle since the last clearerr
 
 sub fileError {
     my ($fh) = @_;
-    return $fh->fileno()->error();
+    return $fh->error();
 }
 
 =method checkDevice
@@ -62,7 +62,7 @@ Check device
 
 sub checkDevice {
     my ($fh, $addr) = @_;
-    my $retval = Device::I2C::_check_device($fh->fileno(), $addr);
+    my $retval = Device::I2C::_checkDevice($fh->fileno(), $addr);
     return $retval;
 }
 
