@@ -6,15 +6,15 @@ Device::I2C - Control and read hardware devices with i2c(SMBus)
     <p>
     <img src="https://img.shields.io/badge/perl-5.10+-brightgreen.svg" alt="Requires Perl 5.10+" />
     <a href="https://travis-ci.org/shantanubhadoria/perl-Device-I2C"><img src="https://api.travis-ci.org/shantanubhadoria/perl-Device-I2C.svg?branch=build/master" alt="Travis status" /></a>
-    <a href="http://matrix.cpantesters.org/?dist=Device-I2C%200.04"><img src="https://badgedepot.code301.com/badge/cpantesters/Device-I2C/0.04" alt="CPAN Testers result" /></a>
-    <a href="http://cpants.cpanauthors.org/dist/Device-I2C-0.04"><img src="https://badgedepot.code301.com/badge/kwalitee/Device-I2C/0.04" alt="Distribution kwalitee" /></a>
+    <a href="http://matrix.cpantesters.org/?dist=Device-I2C%200.05"><img src="https://badgedepot.code301.com/badge/cpantesters/Device-I2C/0.05" alt="CPAN Testers result" /></a>
+    <a href="http://cpants.cpanauthors.org/dist/Device-I2C-0.05"><img src="https://badgedepot.code301.com/badge/kwalitee/Device-I2C/0.05" alt="Distribution kwalitee" /></a>
     <a href="https://gratipay.com/shantanubhadoria"><img src="https://img.shields.io/gratipay/shantanubhadoria.svg" alt="Gratipay" /></a>
     </p>
 </div>
 
 # VERSION
 
-version 0.04
+version 0.05
 
 # SYNOPSIS
 

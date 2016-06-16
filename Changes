@@ -1,4 +1,7 @@
 Changelog for Device-I2C
 
-0.04 2016-06-16T09:35:13
+0.05 2016-06-16T12:47:37
+ - correct fileError and checkDevice (Slava Volkov)
+
+0.04 2016-06-16T09:35:49
  - first commit (Slava Volkov)
