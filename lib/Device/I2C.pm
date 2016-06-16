@@ -52,22 +52,18 @@ sub fileError {
     return $fh->fileno()->error();
 }
 
-=method check
+=method checkDevice
 
- $self->check($register_address)
+ $self->checkDevice($register_address)
 
 Check device
 
 =cut
 
-sub check {
+sub checkDevice {
     my ($fh, $addr) = @_;
-    if ($fh->ioctl(I2C_SLAVE, $addr) < 0) {
-        printf("Device 0x%x not found\n", $addr);
-        return 1;
-    } else {
-        return 0;
-    }
+    my $retval = Device::I2C::_check_device($fh->fileno(), $addr);
+    return $retval;
 }
 
 =method selectDevice

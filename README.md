@@ -6,15 +6,15 @@ Device::I2C - Control and read hardware devices with i2c(SMBus)
     <p>
     <img src="https://img.shields.io/badge/perl-5.10+-brightgreen.svg" alt="Requires Perl 5.10+" />
     <a href="https://travis-ci.org/shantanubhadoria/perl-Device-I2C"><img src="https://api.travis-ci.org/shantanubhadoria/perl-Device-I2C.svg?branch=build/master" alt="Travis status" /></a>
-    <a href="http://matrix.cpantesters.org/?dist=Device-I2C%200.03"><img src="https://badgedepot.code301.com/badge/cpantesters/Device-I2C/0.03" alt="CPAN Testers result" /></a>
-    <a href="http://cpants.cpanauthors.org/dist/Device-I2C-0.03"><img src="https://badgedepot.code301.com/badge/kwalitee/Device-I2C/0.03" alt="Distribution kwalitee" /></a>
+    <a href="http://matrix.cpantesters.org/?dist=Device-I2C%200.04"><img src="https://badgedepot.code301.com/badge/cpantesters/Device-I2C/0.04" alt="CPAN Testers result" /></a>
+    <a href="http://cpants.cpanauthors.org/dist/Device-I2C-0.04"><img src="https://badgedepot.code301.com/badge/kwalitee/Device-I2C/0.04" alt="Distribution kwalitee" /></a>
     <a href="https://gratipay.com/shantanubhadoria"><img src="https://img.shields.io/gratipay/shantanubhadoria.svg" alt="Gratipay" /></a>
     </p>
 </div>
 
 # VERSION
 
-version 0.03
+version 0.04
 
 # SYNOPSIS
 
@@ -84,9 +84,9 @@ you should now see the addresses of the i2c devices connected to your i2c bus
 
 returns IO::Handle->error() for the device handle since the last clearerr
 
-## check
+## checkDevice
 
-    $self->check($register_address)
+    $self->checkDevice($register_address)
 
 Check device
 
@@ -227,7 +227,7 @@ The SMBus was defined by Intel in 1995. It carries clock, data, and instructions
 ## Bugs / Feature Requests
 
 Please report any bugs or feature requests through github at 
-[https://github.com/shantanubhadoria/perl-device-i2c/issues](https://github.com/shantanubhadoria/perl-device-i2c/issues).
+[https://github.com/sv99/perl-device-i2c/issues](https://github.com/sv99/perl-device-i2c/issues).
 You will be notified automatically of any progress on your issue.
 
 ## Source Code
@@ -235,9 +235,9 @@ You will be notified automatically of any progress on your issue.
 This is open source software.  The code repository is available for
 public review and contribution under the terms of the license.
 
-[https://github.com/shantanubhadoria/perl-device-i2c](https://github.com/shantanubhadoria/perl-device-i2c)
+[https://github.com/sv99/perl-device-i2c](https://github.com/sv99/perl-device-i2c)
 
-    git clone git://github.com/shantanubhadoria/perl-device-i2c.git
+    git clone git://github.com/sv99/perl-device-i2c.git
 
 # AUTHOR
 

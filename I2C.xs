@@ -18,6 +18,14 @@ int I2C__writeQuick(file, value)
   OUTPUT:
     RETVAL
 
+int I2C__checkDevice(file, value)
+    int file
+    int value
+  CODE:
+    RETVAL = i2c_smbus_check_device(file, value);
+  OUTPUT:
+    RETVAL
+
 int I2C__readByte(file)
     int file
   CODE:

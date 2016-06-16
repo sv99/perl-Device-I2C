@@ -330,5 +330,13 @@ static inline __s32 i2c_smbus_block_process_call(int file, __u8 command,
 	}
 }
 
+static inline __s32 i2c_smbus_check_device(int file, int addr) {
+    if (ioctl(file, I2C_SLAVE, addr) < 0) {
+        return (errno == EBUSY) ? 1 : 0;
+    } else {
+        int res = i2c_smbus_write_quick(file, I2C_SMBUS_WRITE);
+        return (res < 0) ? 0 : 1;
+    }
+}
 
 #endif /* LIB_I2CDEV_H */
