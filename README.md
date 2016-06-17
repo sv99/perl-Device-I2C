@@ -6,22 +6,22 @@ Device::I2C - Control and read hardware devices with i2c(SMBus)
     <p>
     <img src="https://img.shields.io/badge/perl-5.10+-brightgreen.svg" alt="Requires Perl 5.10+" />
     <a href="https://travis-ci.org/shantanubhadoria/perl-Device-I2C"><img src="https://api.travis-ci.org/shantanubhadoria/perl-Device-I2C.svg?branch=build/master" alt="Travis status" /></a>
-    <a href="http://matrix.cpantesters.org/?dist=Device-I2C%200.05"><img src="https://badgedepot.code301.com/badge/cpantesters/Device-I2C/0.05" alt="CPAN Testers result" /></a>
-    <a href="http://cpants.cpanauthors.org/dist/Device-I2C-0.05"><img src="https://badgedepot.code301.com/badge/kwalitee/Device-I2C/0.05" alt="Distribution kwalitee" /></a>
+    <a href="http://matrix.cpantesters.org/?dist=Device-I2C%200.06"><img src="https://badgedepot.code301.com/badge/cpantesters/Device-I2C/0.06" alt="CPAN Testers result" /></a>
+    <a href="http://cpants.cpanauthors.org/dist/Device-I2C-0.06"><img src="https://badgedepot.code301.com/badge/kwalitee/Device-I2C/0.06" alt="Distribution kwalitee" /></a>
     <a href="https://gratipay.com/shantanubhadoria"><img src="https://img.shields.io/gratipay/shantanubhadoria.svg" alt="Gratipay" /></a>
     </p>
 </div>
 
 # VERSION
 
-version 0.05
+version 0.06
 
 # SYNOPSIS
 
     use Device::I2C;
     use Fcntl;
     $dev = Device::I2C->new('/dev/i2c-1', O_RDWR);
-    $dev->check(0x4c);
+    $dev->checkDevice(0x4c);
     print $dev->readByteData(0x20);
 
 # DESCRIPTION
@@ -202,23 +202,22 @@ Destructor
 
 # CREATING YOUR OWN CHIPSET DRIVERS
 
-Writing your own chipset driver for your own i2c devices is quiet simple. You just need to know the i2c address of your device and the registers that you need to read or write. Follow the manual at [Device::I2C::Manual](https://metacpan.org/pod/Device::I2C::Manual).
+Writing your own chipset driver for your own i2c devices is quiet simple. You just need to know the i2c address of your device and the registers that you need to read or write. Example in the [Device::I2C::ADV7611](https://metacpan.org/pod/Device::I2C::ADV7611).
 
 # NOTES
 
-I wrote this library for my Quadrotor project for controlling PWM Wave Generators ( ESC or DC motor controller ), Accelerometer, Gyroscope, Magnetometer, Altimeter, Temperature Sensor etc. However this module can also be used by anyone who wishes to read or control motherboard devices on I2C like laptop battery system, temperature or voltage sensors, fan controllers, lid switches, clock chips. Some PCI add in cards may connect to a I2C segment.
+Based on the [Device::SMBus](https://metacpan.org/pod/Device::SMBus) without [Moo](https://metacpan.org/pod/Moo). On my device [Moo](https://metacpan.org/pod/Moo) based script started 5 second.
 
 The SMBus was defined by Intel in 1995. It carries clock, data, and instructions and is based on Philips' I2C serial bus protocol. Its clock frequency range is 10 kHz to 100 kHz. (PMBus extends this to 400 kHz.) Its voltage levels and timings are more strictly defined than those of I2C, but devices belonging to the two systems are often successfully mixed on the same bus. SMBus is used as an interconnect in several platform management standards including: ASF, DASH, IPMI. 
 
-\-wiki
-
 # USAGE
 
-- This module provides a simplified object oriented interface to the libi2c-dev library for accessing electronic peripherals connected on the I2C bus. It uses Moo.
+- This module provides a simplified object oriented interface to the libi2c-dev library for accessing electronic peripherals connected on the I2C bus.
 
 # SEE ALSO
 
-- [Moo](https://metacpan.org/pod/Moo)
+- [Device::SMBus](https://metacpan.org/pod/Device::SMBus)
+- [Device::I2C::ADV7611](https://metacpan.org/pod/Device::I2C::ADV7611)
 - [IO::File](https://metacpan.org/pod/IO::File)
 - [Fcntl](https://metacpan.org/pod/Fcntl)
 
