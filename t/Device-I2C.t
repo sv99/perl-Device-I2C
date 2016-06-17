@@ -1,5 +1,5 @@
 # Before `make install' is performed this script should be runnable with
-# `make test'. After `make install' it should work as `perl Device-SMBus.t'
+# `make test'. After `make install' it should work as `perl Device-I2C.t'
 
 #########################
 
@@ -9,7 +9,7 @@ use strict;
 use warnings;
 
 use Test::More tests => 1;
-BEGIN { use_ok('Device::SMBus') };
+BEGIN { use_ok('Device::I2C') };
 
 #########################
 

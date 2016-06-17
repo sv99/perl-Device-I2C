@@ -298,7 +298,7 @@ __END__
   use Device::I2C;
   use Fcntl;
   $dev = Device::I2C->new('/dev/i2c-1', O_RDWR);
-  $dev->check(0x4c);
+  $dev->checkDevice(0x4c);
   print $dev->readByteData(0x20);
 
 = DESCRIPTION
@@ -357,23 +357,22 @@ you should now see the addresses of the i2c devices connected to your i2c bus
 
 = CREATING YOUR OWN CHIPSET DRIVERS
 
-Writing your own chipset driver for your own i2c devices is quiet simple. You just need to know the i2c address of your device and the registers that you need to read or write. Follow the manual at [Device::I2C::Manual].
+Writing your own chipset driver for your own i2c devices is quiet simple. You just need to know the i2c address of your device and the registers that you need to read or write. Example in the [Device::I2C::ADV7611].
 
 = NOTES
 
-I wrote this library for my Quadrotor project for controlling PWM Wave Generators ( ESC or DC motor controller ), Accelerometer, Gyroscope, Magnetometer, Altimeter, Temperature Sensor etc. However this module can also be used by anyone who wishes to read or control motherboard devices on I2C like laptop battery system, temperature or voltage sensors, fan controllers, lid switches, clock chips. Some PCI add in cards may connect to a I2C segment.
+Based on the [Device::SMBus] without [Moo]. On my device [Moo] based script started 5 second.
 
 The SMBus was defined by Intel in 1995. It carries clock, data, and instructions and is based on Philips' I2C serial bus protocol. Its clock frequency range is 10 kHz to 100 kHz. (PMBus extends this to 400 kHz.) Its voltage levels and timings are more strictly defined than those of I2C, but devices belonging to the two systems are often successfully mixed on the same bus. SMBus is used as an interconnect in several platform management standards including: ASF, DASH, IPMI. 
 
--wiki
-
 = USAGE
 
-* This module provides a simplified object oriented interface to the libi2c-dev library for accessing electronic peripherals connected on the I2C bus. It uses Moo.
+* This module provides a simplified object oriented interface to the libi2c-dev library for accessing electronic peripherals connected on the I2C bus.
 
 = SEE ALSO
 
-* [Moo]
+* [Device::SMBus]
+* [Device::I2C::ADV7611]
 * [IO::File]
 * [Fcntl]
 
